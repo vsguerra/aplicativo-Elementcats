@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+   
+    <label >ElementCats</label>
+    
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Jogada: {{ player }}</ion-card-subtitle>
+      <ion-card-title *ngIf="winner">O jogador {{ winner }} venceu!</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" *ngFor="let val of squares; let i = index">
+            <app-square        
+                [value]="val"
+                (click)="makeMove(i)"> 
+            </app-square>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
+  <ion-button expand="block" color="dark">Vizualizar Ranking</ion-button>
+
+  
+
+
+
+
+</ion-content>
