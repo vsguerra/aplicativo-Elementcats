@@ -50,7 +50,11 @@ const routes: Routes = [
   path: '',
   redirectTo: 'musica',
   pathMatch: 'full'
-},
+},  {
+    path: 'editar',
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
+  },
+
  
 ];
 

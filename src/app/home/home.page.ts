@@ -8,7 +8,7 @@ import { IonSlides, LoadingController, ToastController } from '@ionic/angular';
 })
 export class HomePage {
   @ViewChild(IonSlides) slides: IonSlides;
-  constructor() {}
+  constructor() { }
 
 
 
@@ -18,10 +18,10 @@ export class HomePage {
   segmentChanged(event: any) {
     if (event.detail.value === 'login') {
       this.slides.slidePrev();
-      
+
     } else {
       this.slides.slideNext();
-     
+
     }
   }
 }
