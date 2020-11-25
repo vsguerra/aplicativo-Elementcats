@@ -1,20 +1,64 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="swiper-no-swiping">
+  <div class="container top">
+   
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-segment (ionChange)="segmentChanged($event)" mode="ios" value="login">
+      <ion-segment-button mode="ios" value="login">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode="ios" value="register">
+        <ion-label>Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-slides>
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Login</span>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="email" placeholder="E-mail" ></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="password" placeholder="Senha" ></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top"  color="light" expand="block">
+          Entrar
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Cadastro</span>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Nome"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="email" placeholder="E-mail" ></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="password" placeholder="Senha" ></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" color="light" expand="block">
+          Cadastrar
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ocean">
+    <div class="waves" ></div>
+
+    <div class="container bottom ion-text-center" >
+      
+    </div>
   </div>
 </ion-content>
