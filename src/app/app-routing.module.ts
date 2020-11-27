@@ -60,7 +60,15 @@ const routes: Routes = [
     redirectTo: 'editar',
     pathMatch: 'full'
   
+  },  {
+    path: 'create',
+    loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
   },
+  {
+    path: 'criacao',
+    loadChildren: () => import('./criacao/criacao.module').then( m => m.CriacaoPageModule)
+  },
+
 
  
 ];
