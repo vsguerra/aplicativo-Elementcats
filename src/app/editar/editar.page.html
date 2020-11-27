@@ -13,13 +13,13 @@
     <ion-list>
       <ion-item>
         <ion-label position="floating">Nome</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="song.title"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Favorita</ion-label>
-        <ion-toggle slot="start"></ion-toggle>
+        <ion-toggle slot="start" [(ngModel)]="song.favorite" ></ion-toggle>
       </ion-item>
-      <ion-button expand="block">
+      <ion-button expand="block" (click)= "save()">
       <ion-icon slot="start" name="add" ></ion-icon>
         Salvar
     </ion-button>

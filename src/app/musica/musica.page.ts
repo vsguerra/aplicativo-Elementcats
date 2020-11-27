@@ -1,18 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { Song, SongService } from '../services/song.service';
+import { SongService } from '../services/song.service';
+
+
 
 @Component({
   selector: 'app-musica',
   templateUrl: './musica.page.html',
   styleUrls: ['./musica.page.scss'],
 })
-export class MusicaPage implements OnInit {
+export class MusicaPage  {
+  
+public songs = this.songService.allSongs();
+   
 
-  public songs = this.songService.songs; 
+  constructor(private songService: SongService ) { 
 
-  constructor( private songService: SongService) { }
-
-  ngOnInit() {
   }
+
+  public find(id: number){
+    
+  }  
 
 }
