@@ -68,6 +68,10 @@ const routes: Routes = [
     path: 'criacao',
     loadChildren: () => import('./criacao/criacao.module').then( m => m.CriacaoPageModule)
   },
+  {
+    path: 'busca',
+    loadChildren: () => import('./busca/busca.module').then( m => m.BuscaPageModule)
+  },
 
 
  

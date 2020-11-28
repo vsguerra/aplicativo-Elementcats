@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>busca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let u of users"  >
+
+    <ion-card-header>
+      <ion-card-subtitle>{{u.name}}</ion-card-subtitle>
+      <ion-card-title>{{u.email}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        {{u.company.name}} - {{u.phone}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
