@@ -1,6 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+export interface comentario {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}
 
 export interface Geo {
   lat: string;
@@ -42,7 +49,7 @@ export interface User {
 export class BuscaPage implements OnInit {
 
   public pergunta = ''; 
-  public users: User[];   
+  public commit: comentario [];   
 
   constructor(private http: HttpClient) { 
       this.chamarHttp(); 
@@ -50,8 +57,8 @@ export class BuscaPage implements OnInit {
   }
         
     async chamarHttp() {
-     const url = 'https://jsonplaceholder.typicode.com/users'; 
-     this.users = (await this.http.get(url).toPromise()) as User[];
+     const url = 'https://jsonplaceholder.typicode.com/comments'; 
+     this.commit = (await this.http.get(url).toPromise()) as comentario[];
     }
        
   ngOnInit() {

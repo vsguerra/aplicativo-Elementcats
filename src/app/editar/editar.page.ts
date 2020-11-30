@@ -1,32 +1,62 @@
+import { Time } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { NavController } from '@ionic/angular';
-import { Song, SongService } from '../services/song.service';
+
+import { ApiService } from '../services/api.service';
+
+
+
 
 @Component({
   selector: 'app-editar',
   templateUrl: './editar.page.html',
   styleUrls: ['./editar.page.scss'],
 })
-export class EditarPage implements OnInit {
+export class EditarPage  {
+
   
-  public song: Song; 
+ 
+  constructor(private apiService: ApiService){
+     // this.createData(); 
+     //this.readData(); 
+      this.updateData(); 
+     //this.deleteData();
 
-  constructor(
-   private songService: SongService,
-   private route: ActivatedRoute, 
-   private navCtrl: NavController
+  }
+  createData(){
+     const data: any = {
+       title: 'Tamires', 
+       body: 'teste', 
+       userId: 10
 
-   ) { }
+     }; 
 
-  ngOnInit() {
-      const id = + this.route.snapshot.paramMap.get('id'); 
-      this.song = this.songService.find(id);
+
+    this.apiService.createData(data).subscribe(data => {
+      console.log(data);
+    });
   }
 
-  save () {
-    this.songService.update(this.song); 
-    this.navCtrl.back(); 
+
+  readData() {
+    this.apiService.readData().subscribe(data => {
+      console.log(data); 
+    });
   }
+
+  updateData(){
+     const data: any = {
+      
+        id: 1,
+        title: 'aplicativo',
+        body: 'mobile',
+        userId: 1
+      };
+
+    this.apiService.updateData(data).subscribe(data => {
+      console.log(data); 
+    });
+  }
+
 
 }

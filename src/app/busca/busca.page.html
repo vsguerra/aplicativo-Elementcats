@@ -1,20 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>busca</ion-title>
+    <ion-title>Comentarios</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-card *ngFor="let u of users"  >
+  <ion-card *ngFor="let u of commit"  >
 
     <ion-card-header>
-      <ion-card-subtitle>{{u.name}}</ion-card-subtitle>
-      <ion-card-title>{{u.email}}</ion-card-title>
+      <ion-card-subtitle>{{u.email}}</ion-card-subtitle>
+      <ion-card-title>{{u.name}}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-        {{u.company.name}} - {{u.phone}}
+       
     </ion-card-content>
   </ion-card>
 
