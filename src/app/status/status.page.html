@@ -27,11 +27,14 @@
         </ion-row>
       </ion-grid>
     </ion-card-content>
+    <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
+
   </ion-card>
 
 
-  <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
-  <ion-button expand="block" color="dark">Vizualizar Ranking</ion-button>
+  <ion-button routerLink="/regras" expand="block" color="dark">Vizualizar Ranking</ion-button>
+  <ion-button routerLink="/historia" expand="block" color="dark">Regras do Jogo</ion-button>
+  
 
   
 
