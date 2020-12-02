@@ -24,7 +24,7 @@ export class StatusPage  {
      this.xIsNext = true; 
  }
  get player () {
-    return this.xIsNext ? 'Ar' : 'Fogo' ;
+    return this.xIsNext ? 'Agua' : 'Fogo' ;
  }
 
  makeMove (idx: number){
