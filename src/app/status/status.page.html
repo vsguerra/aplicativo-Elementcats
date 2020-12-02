@@ -1,8 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color=primary>
    
-    <label >ElementCats</label>
-    
+    <ion-title>ElemenCats</ion-title>
     
   </ion-toolbar>
 </ion-header>
@@ -27,11 +26,14 @@
         </ion-row>
       </ion-grid>
     </ion-card-content>
+    <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
+
   </ion-card>
 
 
-  <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
-  <ion-button expand="block" color="dark">Vizualizar Ranking</ion-button>
+  <ion-button routerLink="/regras" expand="block">Vizualizar Ranking</ion-button>
+  <ion-button routerLink="/historia" expand="block">Regras do Jogo</ion-button>
+  
 
   
 

@@ -4,7 +4,7 @@
 
     <ion-segment (ionChange)="segmentChanged($event)" mode="ios" value="login">
       <ion-segment-button mode="ios" value="login">
-        <ion-label>Login</ion-label>
+        <ion-label>Vitor Guerra</ion-label>
       </ion-segment-button>
       <ion-segment-button mode="ios" value="register">
         <ion-label>Cadastro</ion-label>
@@ -25,7 +25,7 @@
           <ion-input type="password" placeholder="Senha"></ion-input>
         </ion-item>
 
-        <ion-button class="ion-margin-top" color="light" expand="block">
+        <ion-button class="ion-margin-top" color="light" routerLink="/status" expand="block">
           Entrar
         </ion-button>
       </div>
@@ -47,7 +47,7 @@
           <ion-input type="password" placeholder="Senha"></ion-input>
         </ion-item>
 
-        <ion-button class="ion-margin-top" color="light" expand="block">
+        <ion-button class="ion-margin-top" color="light" routerLink="/status" expand="block">
           Cadastrar
         </ion-button>
       </div>
@@ -62,3 +62,4 @@
     </div>
   </div>
 </ion-content>
+
