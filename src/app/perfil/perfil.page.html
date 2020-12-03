@@ -8,9 +8,10 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
+  <ion-content [fullscreen]="true">
     <!--Imagem do perfil-->
-<ion-card>
+
+    <ion-card>
       <iom-card-header>
         <ion-row>
           <ion-col size="auto">
@@ -23,4 +24,37 @@
     </iom-card-header>
     </ion-card>
 
-    
+    <!--Dados do usuario-->
+    <h1>
+    <ion-title>
+      Dados Pessoais 
+    </ion-title>
+  </h1>
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input aria-placeholder="" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Celular</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+     <h1>
+    <ion-title> Conta Elemencats </ion-title>
+    </h1>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Senha</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-button routerLink="/home" expand="block">Sair</ion-button>
+    <ion-button routerLink="/tabs/home" expand="block">Salvar</ion-button>
+
+  </ion-content>
+</Ionpage>
