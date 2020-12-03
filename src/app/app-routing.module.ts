@@ -72,6 +72,10 @@ const routes: Routes = [
     path: 'busca',
     loadChildren: () => import('./busca/busca.module').then( m => m.BuscaPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 
 
  
