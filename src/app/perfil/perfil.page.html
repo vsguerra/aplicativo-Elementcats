@@ -1,9 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>perfil</ion-title>
+  <ion-toolbar color="primary">   
+     <ion-buttons slot="start"> 
+    <ion-back-button defaultHref="/status"></ion-back-button>
+  </ion-buttons>
+    <ion-title>
+      Perfil 
+    </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true">
+    <!--Imagem do perfil-->
+<ion-card>
+      <iom-card-header>
+        <ion-row>
+          <ion-col size="auto">
+            <ion-avatar><img src="https://randomuser.me/api/portraits/men/42.jpg" alt=""></ion-avatar>
+          </ion-col>
+        <ion-col>
+      <ion-card-title>Alterar Foto</ion-card-title>
+    </ion-col>
+    </ion-row>
+    </iom-card-header>
+    </ion-card>
 
-<ion-content>
-
-</ion-content>
+    
